@@ -6,7 +6,7 @@ EXPOSE 9090
 
 RUN addgroup -S javauser && adduser -S javauser -G javauser
 
-ADD target/mongo-0.0.1-SNAPSHOT.jar /home/javauser/app.jar
+ADD target/samples-mongo-0.0.1-SNAPSHOT.jar /home/javauser/app.jar
 
 USER javauser
 
