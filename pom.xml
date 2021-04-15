@@ -8,10 +8,10 @@
 		<version>2.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.assisjrs.samples</groupId>
-	<artifactId>mongo</artifactId>
+	<groupId>com.assisjrs</groupId>
+	<artifactId>samples-mongo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mongo</name>
+	<name>samples-mongo</name>
 	<description>Projeto de exemplo sobre o uso de mongo com springboot</description>
 
 	<properties>
