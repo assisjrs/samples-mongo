@@ -20,4 +20,14 @@ class ListarTodosTests {
 		webTestClient.get().uri("/livros").exchange().expectStatus().isOk();
 	}
 
+	@Test
+	void retornaId() {
+		webTestClient.get().uri("/livros").exchange().expectBody().jsonPath("$.[0].id").exists();
+	}
+
+	@Test
+	void retornaTitulo() {
+		webTestClient.get().uri("/livros").exchange().expectBody().jsonPath("$.[0].titulo").exists();
+	}
+
 }
