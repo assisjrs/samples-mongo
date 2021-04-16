@@ -25,13 +25,13 @@ public class ListarTodosServiceTests {
     private LivroRepository livroRepository;
 
     @Test
-    void naoDeveRetonarNulo() {
+    void naoDeveRetonarNuloAoListarLivros() {
         List<?> retornoListarTodos = livroService.listarTodos();
         assertThat(retornoListarTodos).isNotNull();
     }
 
     @Test
-    void deveUsarRepositorio() {
+    void deveUsarRepositorioParaListarLivros() {
         livroService.listarTodos();
         verify(livroRepository, atLeastOnce()).findAll();
     }
