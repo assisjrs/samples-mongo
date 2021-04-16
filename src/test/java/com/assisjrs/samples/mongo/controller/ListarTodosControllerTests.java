@@ -1,4 +1,4 @@
-package com.assisjrs.samples.mongo;
+package com.assisjrs.samples.mongo.controller;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 
 @AutoConfigureWebTestClient
 @SpringBootTest(webEnvironment = DEFINED_PORT)
-class ListarTodosTests {
+class ListarTodosControllerTests {
 	@Autowired
 	private WebTestClient webTestClient;
 
@@ -29,5 +29,4 @@ class ListarTodosTests {
 	void retornaTitulo() {
 		webTestClient.get().uri("/livros").exchange().expectBody().jsonPath("$.[0].titulo").exists();
 	}
-
 }
