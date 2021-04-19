@@ -39,6 +39,7 @@ public class LivroController {
 
     @PostMapping
     public ResponseEntity<?> adicionarLivro() {
-        return ResponseEntity.status(HttpStatus.OK).build();
+        LivroResponse livroResponse = new LivroResponse("1", "Senhor Dos aneis : A Sociedade do Anel");
+        return ResponseEntity.ok(livroResponse);
     }
 }

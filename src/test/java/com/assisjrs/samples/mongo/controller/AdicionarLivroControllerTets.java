@@ -21,4 +21,9 @@ public class AdicionarLivroControllerTets {
     void retornaStatus200() {
         webTestClient.post().uri("/livros").exchange().expectStatus().isOk();
     }
+
+    @Test
+    void retornaId() {
+        webTestClient.post().uri("/livros").exchange().expectBody().jsonPath("$.id").exists();
+    }
 }
