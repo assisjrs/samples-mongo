@@ -37,7 +37,7 @@ public class ListarTodosServiceMockTests {
     }
 
     @Test
-    void deveManterOrdemDeEntradaDeLivros() {
+    void deveManterOrdemDeEntradaDeListarLivros() {
         List<Livro> retornoListarTodos = new ArrayList<>();
 
         Livro livro1 = new Livro("1", "Senhor Dos aneis : A Sociedade do Anel");

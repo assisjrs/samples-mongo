@@ -22,7 +22,7 @@ class ListarTodosControllerTests {
 	private LivroRepository livroRepository;
 
 	@BeforeEach
-	void antesDeCadaTeste() {
+	void antesDeCadaTesteListarLivros() {
 		Livro livro = new Livro("1", "Senhor Dos aneis : A Sociedade do Anel");
 		livroRepository.save(livro);
 
@@ -31,17 +31,17 @@ class ListarTodosControllerTests {
 	}
 
 	@Test
-	void retornaStatus200() {
+	void retornaStatus200ListarLivros() {
 		webTestClient.get().uri("/livros").exchange().expectStatus().isOk();
 	}
 
 	@Test
-	void retornaId() {
+	void retornaIdListarListarLivros() {
 		webTestClient.get().uri("/livros").exchange().expectBody().jsonPath("$.[0].id").exists();
 	}
 
 	@Test
-	void retornaTitulo() {
+	void retornaTituloListarLivros() {
 		webTestClient.get().uri("/livros").exchange().expectBody().jsonPath("$.[0].titulo").exists();
 	}
 }

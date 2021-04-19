@@ -18,12 +18,17 @@ public class AdicionarLivroControllerTets {
     private WebTestClient webTestClient;
 
     @Test
-    void retornaStatus200() {
+    void retornaStatus200AdicionarLivro() {
         webTestClient.post().uri("/livros").exchange().expectStatus().isOk();
     }
 
     @Test
-    void retornaId() {
+    void retornaIdAdicionarLivro() {
         webTestClient.post().uri("/livros").exchange().expectBody().jsonPath("$.id").exists();
+    }
+
+    @Test
+    void retornaTituloAdicionarLivro() {
+        webTestClient.post().uri("/livros").exchange().expectBody().jsonPath("$.titulo").exists();
     }
 }
